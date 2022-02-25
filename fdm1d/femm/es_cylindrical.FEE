@@ -1,0 +1,59 @@
+[Format]      =  1
+[Precision]   =  1e-008
+[MinAngle]    =  30
+[DoSmartMesh] =  1
+[Depth]       =  1
+[LengthUnits] =  meters
+[ProblemType] =  axisymmetric
+[Coordinates] =  cartesian
+[Comment]     =  "Add comments here."
+[PointProps]   = 0
+[BdryProps]   = 1
+  <BeginBdry>
+    <BdryName> = "Ground"
+    <BdryType> = 0
+    <Vs> = 0
+    <qs> = 0
+    <c0> = 0
+    <c1> = 0
+  <EndBdry>
+[BlockProps]  = 2
+  <BeginBlock>
+    <BlockName> = "Dielectric"
+    <ex> = 1
+    <ey> = 1
+    <qv> = 0
+  <EndBlock>
+  <BeginBlock>
+    <BlockName> = "Conductor"
+    <ex> = 1
+    <ey> = 1
+    <qv> = 9.9999999999999998e-013
+  <EndBlock>
+[ConductorProps]  = 1
+  <BeginConductor>
+    <ConductorName> = "New Conductor"
+    <Vc> = 0
+    <qc> = 1.0000000000000001e-009
+    <ConductorType> = 0
+  <EndConductor>
+[NumPoints] = 6
+0	0	0	0	0
+0	1	0	0	0
+1	0	0	0	0
+1	1	0	0	0
+0.25	1	0	0	0
+0.25	0	0	0	0
+[NumSegments] = 7
+1	4	-1	0	0	0	0
+3	2	-1	1	0	0	0
+2	5	-1	0	0	0	0
+0	1	-1	0	0	0	0
+4	3	-1	0	0	0	0
+5	0	-1	0	0	0	0
+4	5	-1	0	0	0	1
+[NumArcSegments] = 0
+[NumHoles] = 0
+[NumBlockLabels] = 2
+0.15000000000000002	0.5	1	-1	0	0
+0.65000000000000002	0.5	1	-1	0	0
